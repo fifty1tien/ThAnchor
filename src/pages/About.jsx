@@ -99,7 +99,11 @@ export default function About() {
               <dd>Ketua Kelas X RPL 2</dd>
             </motion.div>
           </motion.dl>
-          <a className="primary-btn" href="/CV-Sulthan.pdf" download>
+          <a
+            className="primary-btn"
+            href={`${import.meta.env.BASE_URL}CV-Sulthan.html`}
+            download="CV-Sulthan.html"
+          >
             <Download size={16} /> Download CV
           </a>
         </div>
