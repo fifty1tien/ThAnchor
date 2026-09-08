@@ -1,6 +1,7 @@
 import { Anchor, Code2, Download, Palette, Radio, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import OceanDecor from "../components/OceanDecor";
+import portraitImage from "../../IMG/Than.png";
 const skills = [
   ["HTML / CSS", 88, Code2],
   ["Creative direction", 76, Palette],
@@ -36,10 +37,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <img
-            src={`${import.meta.env.BASE_URL}IMG/Than.png`}
-            alt="M. Sulthan Muzaki"
-          />
+          <img src={portraitImage} alt="M. Sulthan Muzaki" />
           <span className="portrait-caption">
             M. Sulthan Muzaki
             <br />
