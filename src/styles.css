@@ -154,6 +154,13 @@ input:focus-visible {
   color: var(--coral);
   transform: translateY(-2px);
 }
+.music-toggle {
+  position: relative;
+  z-index: 3;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 8px;
+}
 .contact-pill,
 .primary-btn {
   display: inline-flex;

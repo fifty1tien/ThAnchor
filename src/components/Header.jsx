@@ -12,6 +12,7 @@ import bgmUrl from "../../MP3/bgm.mp3";
 export default function Header({ page, setPage, isDark, toggleTheme }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [musicError, setMusicError] = useState(false);
   const links = [
     ["home", "The Shore"],
     ["about", "The Captain"],
@@ -33,11 +34,18 @@ export default function Header({ page, setPage, isDark, toggleTheme }) {
       setIsPlaying(true);
     } catch {
       setIsPlaying(false);
+      setMusicError(true);
     }
   };
   return (
     <header className="site-header">
-      <audio ref={audioRef} src={bgmUrl} loop preload="metadata" />
+      <audio
+        ref={audioRef}
+        src={bgmUrl}
+        loop
+        preload="metadata"
+        onError={() => setMusicError(true)}
+      />
       <button
         className="brand"
         onClick={() => setPage("home")}
@@ -79,10 +87,23 @@ export default function Header({ page, setPage, isDark, toggleTheme }) {
           {isDark ? <Sun size={17} /> : <Moon size={17} />}
         </button>
         <button
+          type="button"
           className={isPlaying ? "music-toggle is-playing" : "music-toggle"}
           onClick={toggleMusic}
-          aria-label={isPlaying ? "Matikan musik latar" : "Putar musik latar"}
-          title={isPlaying ? "Matikan musik latar" : "Putar musik latar"}
+          aria-label={
+            musicError
+              ? "Musik tidak tersedia"
+              : isPlaying
+                ? "Matikan musik latar"
+                : "Putar musik latar"
+          }
+          title={
+            musicError
+              ? "File musik tidak dapat diputar"
+              : isPlaying
+                ? "Matikan musik latar"
+                : "Putar musik latar"
+          }
         >
           {isPlaying ? <Volume2 size={17} /> : <VolumeX size={17} />}
         </button>
