@@ -8,6 +8,7 @@ import {
   Waves,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import bgmUrl from "../../MP3/bgm.mp3";
 export default function Header({ page, setPage, isDark, toggleTheme }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -36,12 +37,7 @@ export default function Header({ page, setPage, isDark, toggleTheme }) {
   };
   return (
     <header className="site-header">
-      <audio
-        ref={audioRef}
-        src={`${import.meta.env.BASE_URL}MP3/bgm.mp3`}
-        loop
-        preload="metadata"
-      />
+      <audio ref={audioRef} src={bgmUrl} loop preload="metadata" />
       <button
         className="brand"
         onClick={() => setPage("home")}
