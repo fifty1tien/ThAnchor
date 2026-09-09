@@ -17,7 +17,6 @@ export default function Home({ setPage, openPost }) {
       <Hero onExplore={() => setPage("blog")} />
       <ProjectShowcase onDetail={() => setPage("work")} />
       <div className="ocean-transition" aria-hidden="true">
-        <OceanDecor variant="floor" />
         <WaveDivider />
         <span className="transition-caption">
           below the surface / keep exploring
