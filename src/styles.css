@@ -1635,10 +1635,23 @@ body.night-mode .brand-mark {
     font-size: 50vw;
   }
   .hero-orbit {
-    right: 5vw;
-    top: 48%;
-    transform: scale(0.72);
-    transform-origin: right top;
+    width: 270px;
+    height: 270px;
+    right: auto;
+    left: 50%;
+    top: 440px;
+    transform: translateX(-50%) scale(0.82);
+    transform-origin: center top;
+  }
+  .orbit-label {
+    right: auto;
+    left: 50%;
+    bottom: -34px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-align: center;
+    font-size: 8px;
+    line-height: 1.7;
   }
   .hero-copy {
     max-width: 100%;
