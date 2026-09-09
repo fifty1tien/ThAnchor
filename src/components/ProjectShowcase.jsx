@@ -42,7 +42,7 @@ export default function ProjectShowcase({ onDetail }) {
             key={project.title}
             initial={{ opacity: 0, x: index ? 35 : -35 }}
             whileInView={{ opacity: 1, x: 0 }}
-            whileHover={{ x: 10, backgroundColor: "rgba(255, 255, 255, 0.28)" }}
+            whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.28)" }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: index * 0.12 }}
           >

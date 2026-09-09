@@ -967,6 +967,7 @@ h2 em {
 .ocean-decor {
   position: absolute;
   inset: 0;
+  width: 100%;
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
@@ -1363,6 +1364,7 @@ h2 em {
 }
 .ocean-transition {
   position: relative;
+  width: 100%;
   height: 190px;
   overflow: hidden;
   background: linear-gradient(180deg, #e2f7f1 0%, #a8dcd8 55%, #70b6bd 100%);
@@ -1371,6 +1373,7 @@ h2 em {
 .wave-divider {
   position: absolute;
   inset: -1px 0 auto;
+  width: 100%;
   z-index: 3;
   height: 110px;
   overflow: hidden;
