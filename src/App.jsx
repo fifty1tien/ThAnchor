@@ -67,13 +67,13 @@ export default function App() {
               </span>
             </div>
             <div className="loading-bubbles" aria-hidden="true">
-              {Array.from({ length: 14 }, (_, index) => (
+              {Array.from({ length: 18 }, (_, index) => (
                 <i
                   key={index}
                   style={{
                     "--bubble": index,
                     "--bubble-left": `${(index * 37) % 98}%`,
-                    "--bubble-size": `${5 + (index % 4) * 2}px`,
+                    "--bubble-size": `${8 + (index % 5) * 3}px`,
                     "--bubble-delay": `${-(index * 0.45)}s`,
                   }}
                 />
@@ -103,14 +103,23 @@ export default function App() {
                 <span className="submarine-fin" />
               </div>
               <div className="loading-school">
-                <span>𓆝</span>
-                <span>𓆟</span>
-                <span>𓆞</span>
-                <span>𓆝</span>
-                <span>𓆟</span>
-                <span>𓆞</span>
-                <span>𓆝</span>
-                <span>𓆟</span>
+                {Array.from({ length: 14 }, (_, index) => (
+                  <span
+                    key={index}
+                    style={{
+                      "--fish": index % 4,
+                      "--fish-delay": `${-(index * 0.22)}s`,
+                    }}
+                  >
+                    {index % 3 === 0 ? "𓆝" : index % 3 === 1 ? "𓆟" : "𓆞"}
+                  </span>
+                ))}
+              </div>
+              <div className="loading-turtle-pod">
+                <span>🐢</span>
+                <span>🐢</span>
+                <span>🐢</span>
+                <span>🐢</span>
               </div>
               <div className="loading-jellyfish">
                 <b />

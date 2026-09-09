@@ -267,23 +267,45 @@ input:focus-visible {
 }
 .loading-school span:nth-child(2) {
   --fish: 1;
-  animation-delay: -0.8s;
+  animation-delay: var(--fish-delay);
 }
-.loading-school span:nth-child(3) {
-  --fish: 2;
-  animation-delay: -1.2s;
+.loading-turtle-pod {
+  position: absolute;
+  top: 39%;
+  left: 17%;
+  display: flex;
+  gap: 16px;
+  color: #91e4d6;
+  opacity: 0.82;
+  animation: turtle-pod-drift 7s ease-in-out infinite alternate;
 }
-.loading-school span:nth-child(4) {
-  --fish: 1;
-  animation-delay: -1.7s;
+.loading-turtle-pod span {
+  display: inline-block;
+  font-size: 25px;
+  filter: saturate(0.7) drop-shadow(0 5px 5px rgba(3, 28, 45, 0.22));
+  animation: turtle-swim 2.8s ease-in-out infinite alternate;
 }
-@keyframes loading-fish {
+.loading-turtle-pod span:nth-child(2) {
+  font-size: 19px;
+  animation-delay: -0.5s;
+}
+.loading-turtle-pod span:nth-child(3) {
+  font-size: 30px;
+  animation-delay: -1s;
+}
+.loading-turtle-pod span:nth-child(4) {
+  font-size: 21px;
+  animation-delay: -1.5s;
+}
+@keyframes turtle-pod-drift {
   to {
-    transform: translate3d(22px, -13px, 0);
+    transform: translate3d(28vw, -18px, 0);
   }
 }
-.loading-jellyfish {
-  position: absolute;
+@keyframes turtle-swim {
+  to {
+    transform: translateY(-10px) rotate(-6deg);
+  }
   top: 28%;
   right: 18%;
   width: 30px;
