@@ -108,6 +108,10 @@ export default function App() {
                     key={index}
                     style={{
                       "--fish": index % 4,
+                      "--fish-x": `${(index * 47) % 330}px`,
+                      "--fish-y": `${(index * 71) % 155}px`,
+                      "--fish-size": `${14 + (index % 4) * 5}px`,
+                      "--fish-rotate": `${index % 2 ? -8 : 6}deg`,
                       "--fish-delay": `${-(index * 0.22)}s`,
                     }}
                   >

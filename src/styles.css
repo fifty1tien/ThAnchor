@@ -250,24 +250,28 @@ input:focus-visible {
 }
 .loading-school {
   position: absolute;
-  top: 52%;
-  left: 47%;
+  top: 45%;
+  left: 34%;
+  width: 370px;
+  height: 190px;
   color: rgba(145, 228, 214, 0.78);
-  transform: scale(0.75) rotate(-7deg);
+  transform: scale(0.82) rotate(-4deg);
 }
 .loading-school span {
   display: inline-block;
-  margin: 0 5px;
-  font-size: calc(15px + var(--fish) * 5px);
+  position: absolute;
+  left: var(--fish-x);
+  top: var(--fish-y);
+  font-size: var(--fish-size);
+  opacity: calc(0.5 + var(--fish) * 0.1);
+  transform: rotate(var(--fish-rotate));
   animation: loading-fish 3.5s ease-in-out infinite alternate;
-}
-.loading-school span:nth-child(1) {
-  --fish: 0;
-  animation-delay: -0.3s;
-}
-.loading-school span:nth-child(2) {
-  --fish: 1;
   animation-delay: var(--fish-delay);
+}
+@keyframes loading-fish {
+  to {
+    transform: translate3d(22px, -13px, 0) rotate(var(--fish-rotate));
+  }
 }
 .loading-turtle-pod {
   position: absolute;
