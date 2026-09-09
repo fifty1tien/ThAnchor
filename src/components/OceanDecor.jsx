@@ -10,9 +10,31 @@ export default function OceanDecor({ variant = "hero" }) {
     [0, variant === "hero" ? 150 : -55],
   );
   const jellyY = useTransform(scrollY, [0, 900], [0, -90]);
+  const reefY = useTransform(scrollY, [0, 1400], [0, -38]);
+  const wreckY = useTransform(scrollY, [0, 1400], [0, -105]);
+  const whaleY = useTransform(scrollY, [0, 1400], [0, -185]);
 
   return (
     <div className={`ocean-decor ocean-decor-${variant}`} aria-hidden="true">
+      <motion.div
+        className="parallax-layer parallax-whale"
+        style={{ y: whaleY }}
+      >
+        <span />
+      </motion.div>
+      <motion.div
+        className="parallax-layer parallax-wreck"
+        style={{ y: wreckY }}
+      >
+        <span />
+      </motion.div>
+      <motion.div className="parallax-layer parallax-reef" style={{ y: reefY }}>
+        <i />
+        <i />
+        <i />
+        <i />
+        <i />
+      </motion.div>
       <motion.div className="fish-school" style={{ y: schoolY }}>
         {fish.map((shape, index) => (
           <span

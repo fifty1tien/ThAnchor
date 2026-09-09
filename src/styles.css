@@ -84,6 +84,36 @@ input:focus-visible {
   transform: rotate(-12deg) scaleY(0.42);
   animation: loading-orbit 8s linear infinite;
 }
+.loading-tide {
+  position: absolute;
+  top: -40px;
+  left: -10%;
+  width: 120%;
+  height: 65px;
+  border-radius: 50% 50% 0 0 / 72% 72% 0 0;
+  pointer-events: none;
+  z-index: 4;
+  will-change: transform;
+}
+.loading-tide-back {
+  background: rgba(145, 228, 214, 0.5);
+  transform: rotate(-2deg) translateX(-2%);
+  animation: loading-tide-back 5.6s ease-in-out infinite alternate;
+}
+.loading-tide-mid {
+  top: -31px;
+  left: -16%;
+  width: 132%;
+  background: rgba(13, 117, 144, 0.86);
+  transform: rotate(1.5deg) translateX(2%);
+  animation: loading-tide-mid 4.4s ease-in-out -1.2s infinite alternate-reverse;
+}
+.loading-tide-front {
+  top: -23px;
+  background: #063750;
+  transform: rotate(-1deg) translateX(-1%);
+  animation: loading-tide-front 3.8s ease-in-out -0.8s infinite alternate;
+}
 .loading-content {
   position: relative;
   z-index: 3;
@@ -582,6 +612,21 @@ input:focus-visible {
     transform: translateX(32px) rotate(4deg) translateY(-16px);
   }
 }
+@keyframes loading-tide-back {
+  to {
+    transform: translateX(38px) rotate(2deg) translateY(6px);
+  }
+}
+@keyframes loading-tide-mid {
+  to {
+    transform: translateX(-32px) rotate(-2deg) translateY(-5px);
+  }
+}
+@keyframes loading-tide-front {
+  to {
+    transform: translateX(26px) rotate(1.5deg) translateY(4px);
+  }
+}
 .site-header {
   height: 78px;
   padding: 0 5vw;
@@ -932,6 +977,154 @@ h2 em {
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
+}
+.parallax-layer {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
+.parallax-whale {
+  top: 12%;
+  right: 7%;
+  width: 190px;
+  height: 62px;
+  opacity: 0.15;
+  transform: rotate(-5deg);
+}
+.parallax-whale span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 155px;
+  height: 42px;
+  border-radius: 52% 48% 42% 45%;
+  background: var(--deep);
+}
+.parallax-whale span::before,
+.parallax-whale span::after {
+  content: "";
+  position: absolute;
+  left: -29px;
+  bottom: 6px;
+  border-style: solid;
+  border-width: 0 25px 18px 0;
+  border-color: transparent var(--deep) transparent transparent;
+  transform: rotate(12deg);
+}
+.parallax-whale span::after {
+  left: -30px;
+  bottom: -2px;
+  transform: rotate(-12deg) scaleY(-1);
+}
+.parallax-wreck {
+  left: 13%;
+  bottom: 9%;
+  width: 145px;
+  height: 105px;
+  opacity: 0.2;
+  transform: rotate(-4deg);
+}
+.parallax-wreck span {
+  position: absolute;
+  left: 9px;
+  bottom: 13px;
+  width: 126px;
+  height: 26px;
+  border-radius: 8px 4px 45px 15px;
+  background: var(--deep);
+  clip-path: polygon(0 20%, 100% 0, 86% 100%, 12% 82%);
+}
+.parallax-wreck span::before {
+  content: "";
+  position: absolute;
+  left: 53px;
+  bottom: 15px;
+  width: 4px;
+  height: 67px;
+  background: var(--deep);
+  box-shadow: 17px 9px 0 -1px var(--deep);
+}
+.parallax-wreck span::after {
+  content: "";
+  position: absolute;
+  left: 58px;
+  bottom: 62px;
+  width: 38px;
+  height: 1px;
+  background: var(--deep);
+  transform: rotate(-22deg);
+  transform-origin: left;
+}
+.parallax-reef {
+  left: 3%;
+  bottom: -8px;
+  display: flex;
+  align-items: end;
+  gap: 11px;
+  width: 245px;
+  height: 130px;
+  opacity: 0.22;
+}
+.parallax-reef i {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: calc(54px + var(--reef-height, 0px));
+  border-radius: 55% 45% 6px 6px;
+  background: var(--coral);
+  transform: rotate(var(--reef-rotate, 0deg));
+}
+.parallax-reef i::before,
+.parallax-reef i::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: 42%;
+  width: 17px;
+  height: 30px;
+  border-radius: 70% 0 70% 0;
+  background: inherit;
+  transform: rotate(-38deg);
+}
+.parallax-reef i::after {
+  left: 10px;
+  bottom: 66%;
+  transform: rotate(34deg);
+}
+.parallax-reef i:nth-child(2) {
+  --reef-height: 19px;
+  --reef-rotate: 8deg;
+  background: #e8b452;
+}
+.parallax-reef i:nth-child(3) {
+  --reef-height: 34px;
+  --reef-rotate: -8deg;
+  background: var(--sea);
+}
+.parallax-reef i:nth-child(4) {
+  --reef-height: 11px;
+  --reef-rotate: 7deg;
+  background: #e8b452;
+}
+.parallax-reef i:nth-child(5) {
+  --reef-height: 25px;
+  --reef-rotate: -4deg;
+}
+.ocean-decor-floor .parallax-whale {
+  top: 16%;
+  right: 28%;
+}
+.ocean-decor-floor .parallax-wreck {
+  bottom: 18%;
+  left: 37%;
+  transform: scale(0.72) rotate(5deg);
+}
+.ocean-decor-floor .parallax-reef {
+  opacity: 0.36;
+}
+.ocean-decor-contact .parallax-layer,
+.ocean-decor-logbook .parallax-layer {
+  opacity: 0.1;
 }
 .ocean-decor-hero {
   border-radius: inherit;
@@ -1370,13 +1563,45 @@ body.night-mode .transition-caption {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  perspective: 900px;
+  transform-style: preserve-3d;
   transition:
     box-shadow 0.3s,
     background 0.3s;
 }
+.blog-card-surface {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transform-style: preserve-3d;
+  transition: transform 0.28s ease-out;
+  will-change: transform;
+}
 .blog-card:hover {
   box-shadow: 0 22px 40px rgba(6, 43, 67, 0.1);
   background: rgba(255, 255, 255, 0.8);
+}
+.card-fish {
+  position: absolute;
+  top: 69px;
+  left: 31px;
+  z-index: 1;
+  color: var(--coral);
+  font-size: 31px;
+  opacity: 0;
+  transform: translate3d(-42px, 27px, -30px) rotate(-18deg);
+  transition:
+    opacity 0.25s ease,
+    transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  filter: drop-shadow(0 7px 7px rgba(6, 43, 67, 0.16));
+}
+.blog-card:hover .card-fish,
+.blog-card:focus-within .card-fish {
+  opacity: 0.95;
+  transform: translate3d(34px, -22px, 35px) rotate(6deg);
 }
 .card-bubbles {
   position: absolute;
@@ -1476,11 +1701,15 @@ body.night-mode .transition-caption {
   }
 }
 .blog-card h3 {
+  position: relative;
+  z-index: 2;
   max-width: 330px;
   margin: 0 0 10px;
   font: 600 27px/1.1 var(--serif);
 }
 .blog-card p {
+  position: relative;
+  z-index: 2;
   color: var(--muted);
   font-size: 11px;
   line-height: 1.75;
@@ -1490,6 +1719,8 @@ body.night-mode .transition-caption {
   color: #b2d3d2;
 }
 .card-footer {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   gap: 10px;

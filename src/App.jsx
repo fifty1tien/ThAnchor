@@ -53,6 +53,15 @@ export default function App() {
             transition={{ duration: 1.25, ease: [0.76, 0, 0.24, 1] }}
             aria-label="Memuat Ocean Journal"
           >
+            <div
+              className="loading-tide loading-tide-back"
+              aria-hidden="true"
+            />
+            <div className="loading-tide loading-tide-mid" aria-hidden="true" />
+            <div
+              className="loading-tide loading-tide-front"
+              aria-hidden="true"
+            />
             <div className="loading-content">
               <span className="loading-kicker">WELCOME ABOARD / 2026</span>
               <div className="loading-brand">
