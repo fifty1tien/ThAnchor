@@ -25,9 +25,9 @@ export default function App() {
   useEffect(() => {
     const startedAt = performance.now();
     const progressTimer = window.setInterval(() => {
-      setLoadingProgress(Math.min((performance.now() - startedAt) / 2100, 1));
+      setLoadingProgress(Math.min((performance.now() - startedAt) / 4200, 1));
     }, 40);
-    const timer = window.setTimeout(() => setIsLoading(false), 2100);
+    const timer = window.setTimeout(() => setIsLoading(false), 4200);
     return () => {
       window.clearTimeout(timer);
       window.clearInterval(progressTimer);
@@ -104,7 +104,11 @@ export default function App() {
                 </svg>
                 <span
                   className="loading-boat"
-                  style={{ left: `${loadingProgress * 100}%` }}
+                  style={{
+                    left: `${loadingProgress * 100}%`,
+                    top: `${-2 + Math.sin(loadingProgress * Math.PI * 4) * 7}px`,
+                    rotate: `${Math.cos(loadingProgress * Math.PI * 4) * 4 - 4}deg`,
+                  }}
                   aria-hidden="true"
                 >
                   ⛵

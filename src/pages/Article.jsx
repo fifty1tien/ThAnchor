@@ -1,8 +1,19 @@
 import { ArrowLeft, Clock3 } from "lucide-react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 export default function Article({ post, onBack }) {
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+  const boatLeft = useTransform(progress, [0, 1], ["0%", "100%"]);
+  const boatTop = useTransform(
+    progress,
+    [0, 0.2, 0.45, 0.7, 1],
+    ["-1px", "-9px", "1px", "-8px", "-1px"],
+  );
+  const boatRotation = useTransform(
+    progress,
+    [0, 0.2, 0.45, 0.7, 1],
+    ["-5deg", "5deg", "-4deg", "5deg", "-5deg"],
+  );
   return (
     <main className="article-page">
       <div className="reading-progress" aria-label="Progress membaca artikel">
@@ -18,7 +29,10 @@ export default function Article({ post, onBack }) {
             style={{ pathLength: progress }}
           />
         </motion.svg>
-        <motion.span className="reading-boat" style={{ left: progress }}>
+        <motion.span
+          className="reading-boat"
+          style={{ left: boatLeft, top: boatTop, rotate: boatRotation }}
+        >
           ⛵
         </motion.span>
       </div>
