@@ -1387,10 +1387,16 @@ h2 em {
   transform-origin: center top;
 }
 .wave-divider-back {
-  fill: rgba(244, 247, 242, 0.62);
+  stroke: rgba(244, 247, 242, 0.58);
 }
 .wave-divider-front {
-  fill: rgba(168, 220, 216, 0.82);
+  stroke: rgba(112, 182, 189, 0.68);
+}
+.wave-divider-line {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
 }
 @keyframes divider-swell {
   to {
@@ -2410,10 +2416,10 @@ body.night-mode .reading-wave path {
   stroke: var(--cyan);
 }
 body.night-mode .wave-divider-back {
-  fill: rgba(7, 62, 84, 0.72);
+  stroke: rgba(145, 228, 214, 0.5);
 }
 body.night-mode .wave-divider-front {
-  fill: rgba(2, 27, 42, 0.9);
+  stroke: rgba(3, 28, 45, 0.68);
 }
 body.night-mode .fishing-trigger {
   color: var(--cyan);
