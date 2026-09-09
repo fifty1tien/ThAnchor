@@ -1626,6 +1626,9 @@ body.night-mode .transition-caption {
   box-shadow: 0 22px 40px rgba(6, 43, 67, 0.1);
   background: rgba(255, 255, 255, 0.8);
 }
+.featured-card:hover {
+  background: var(--deep);
+}
 .card-fish {
   position: absolute;
   top: 69px;
