@@ -8,11 +8,13 @@ import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import Article from "./pages/Article";
 import { posts } from "./data/posts";
+import RandomArticleFishing from "./components/RandomArticleFishing";
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState("home");
   const [isDark, setIsDark] = useState(false);
   const [article, setArticle] = useState(null);
+  const [fishingPost, setFishingPost] = useState(null);
   useEffect(() => {
     document.body.classList.toggle("night-mode", isDark);
   }, [isDark]);
@@ -28,8 +30,15 @@ export default function App() {
     setPage(nextPage);
   };
   const openPost = (post) => {
+    setFishingPost(null);
     setArticle(posts.find((item) => item.id === post.id));
     setPage("article");
+  };
+  const castForArticle = () => {
+    const options = posts.filter((post) => post.id !== article?.id);
+    setFishingPost(
+      options[Math.floor(Math.random() * options.length)] || posts[0],
+    );
   };
   const content = article ? (
     <Article post={article} onBack={() => navigate("blog")} />
@@ -163,6 +172,12 @@ export default function App() {
         )}
       </AnimatePresence>
       <CustomCursor />
+      <RandomArticleFishing
+        post={fishingPost}
+        onCast={castForArticle}
+        onOpen={openPost}
+        onClose={() => setFishingPost(null)}
+      />
       <Header
         page={page}
         setPage={navigate}

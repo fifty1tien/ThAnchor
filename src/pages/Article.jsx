@@ -2,10 +2,26 @@ import { ArrowLeft, Clock3 } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
 export default function Article({ post, onBack }) {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+  const progress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
   return (
     <main className="article-page">
-      <motion.div className="reading-progress" style={{ scaleX }} />
+      <div className="reading-progress" aria-label="Progress membaca artikel">
+        <motion.svg
+          className="reading-wave"
+          viewBox="0 0 1200 34"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <motion.path
+            d="M0 17 C 90 3, 150 31, 240 17 S 390 3, 480 17 S 630 31, 720 17 S 870 3, 960 17 S 1110 31, 1200 17"
+            pathLength="1"
+            style={{ pathLength: progress }}
+          />
+        </motion.svg>
+        <motion.span className="reading-boat" style={{ left: progress }}>
+          ⛵
+        </motion.span>
+      </div>
       <div className="article-shell">
         <button className="back-button" onClick={onBack}>
           <ArrowLeft size={16} /> Back to notes

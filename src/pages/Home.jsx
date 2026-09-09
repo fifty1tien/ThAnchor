@@ -9,6 +9,7 @@ import BlogCard from "../components/BlogCard";
 import Hero from "../components/Hero";
 import ProjectShowcase from "../components/ProjectShowcase";
 import OceanDecor from "../components/OceanDecor";
+import WaveDivider from "../components/WaveDivider";
 import { posts } from "../data/posts";
 export default function Home({ setPage, openPost }) {
   return (
@@ -17,6 +18,7 @@ export default function Home({ setPage, openPost }) {
       <ProjectShowcase onDetail={() => setPage("work")} />
       <div className="ocean-transition" aria-hidden="true">
         <OceanDecor variant="floor" />
+        <WaveDivider />
         <span className="transition-caption">
           below the surface / keep exploring
         </span>
