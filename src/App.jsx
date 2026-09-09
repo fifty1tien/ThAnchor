@@ -74,6 +74,7 @@ export default function App() {
               <i />
             </div>
             <div className="loading-wave loading-wave-back" />
+            <div className="loading-wave loading-wave-mid" />
             <div className="loading-wave loading-wave-front" />
           </motion.div>
         )}
