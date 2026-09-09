@@ -15,6 +15,7 @@ export default function App() {
   const [isDark, setIsDark] = useState(false);
   const [article, setArticle] = useState(null);
   const [fishingPost, setFishingPost] = useState(null);
+  const [loadingProgress, setLoadingProgress] = useState(0);
   useEffect(() => {
     document.body.classList.toggle("night-mode", isDark);
   }, [isDark]);
@@ -22,8 +23,15 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [page, article]);
   useEffect(() => {
+    const startedAt = performance.now();
+    const progressTimer = window.setInterval(() => {
+      setLoadingProgress(Math.min((performance.now() - startedAt) / 2100, 1));
+    }, 40);
     const timer = window.setTimeout(() => setIsLoading(false), 2100);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      window.clearInterval(progressTimer);
+    };
   }, []);
   const navigate = (nextPage) => {
     setArticle(null);
@@ -77,8 +85,30 @@ export default function App() {
                 <span className="brand-mark">SM</span>
                 <strong>OCEAN JOURNAL</strong>
               </div>
-              <div className="loading-meter">
-                <span />
+              <div className="loading-progress" aria-label="Progress memuat">
+                <svg
+                  viewBox="0 0 360 38"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="loading-progress-track"
+                    d="M4 19 C 32 4, 62 34, 90 19 S 148 4, 176 19 S 234 34, 262 19 S 320 4, 356 19"
+                  />
+                  <path
+                    className="loading-progress-fill"
+                    pathLength="1"
+                    d="M4 19 C 32 4, 62 34, 90 19 S 148 4, 176 19 S 234 34, 262 19 S 320 4, 356 19"
+                    style={{ pathLength: loadingProgress }}
+                  />
+                </svg>
+                <span
+                  className="loading-boat"
+                  style={{ left: `${loadingProgress * 100}%` }}
+                  aria-hidden="true"
+                >
+                  ⛵
+                </span>
               </div>
               <span className="loading-status">
                 gathering the tide<span className="loading-dots">...</span>
