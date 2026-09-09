@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import Article from "./pages/Article";
 import { posts } from "./data/posts";
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState("home");
   const [isDark, setIsDark] = useState(false);
   const [article, setArticle] = useState(null);
@@ -18,6 +19,10 @@ export default function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [page, article]);
+  useEffect(() => {
+    const timer = window.setTimeout(() => setIsLoading(false), 2100);
+    return () => window.clearTimeout(timer);
+  }, []);
   const navigate = (nextPage) => {
     setArticle(null);
     setPage(nextPage);
@@ -39,6 +44,40 @@ export default function App() {
   );
   return (
     <div className="app">
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            className="loading-screen"
+            initial={{ y: 0 }}
+            exit={{ y: "100%" }}
+            transition={{ duration: 1.25, ease: [0.76, 0, 0.24, 1] }}
+            aria-label="Memuat Ocean Journal"
+          >
+            <div className="loading-content">
+              <span className="loading-kicker">WELCOME ABOARD / 2026</span>
+              <div className="loading-brand">
+                <span className="brand-mark">SM</span>
+                <strong>OCEAN JOURNAL</strong>
+              </div>
+              <div className="loading-meter">
+                <span />
+              </div>
+              <span className="loading-status">
+                gathering the tide<span className="loading-dots">...</span>
+              </span>
+            </div>
+            <div className="loading-bubbles" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+            </div>
+            <div className="loading-wave loading-wave-back" />
+            <div className="loading-wave loading-wave-front" />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <CustomCursor />
       <Header
         page={page}
