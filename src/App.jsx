@@ -73,6 +73,42 @@ export default function App() {
               <i />
               <i />
             </div>
+            <div className="loading-life" aria-hidden="true">
+              <div className="loading-submarine">
+                <span className="submarine-window" />
+                <span className="submarine-window" />
+                <span className="submarine-periscope" />
+                <span className="submarine-fin" />
+              </div>
+              <div className="loading-school">
+                <span>𓆝</span>
+                <span>𓆟</span>
+                <span>𓆞</span>
+                <span>𓆝</span>
+              </div>
+              <div className="loading-jellyfish">
+                <b />
+                <i />
+                <i />
+                <i />
+              </div>
+              <div className="loading-coral loading-coral-left">
+                <i />
+                <i />
+                <i />
+              </div>
+              <div className="loading-coral loading-coral-right">
+                <i />
+                <i />
+                <i />
+              </div>
+              <div className="loading-kelp">
+                <i />
+                <i />
+                <i />
+                <i />
+              </div>
+            </div>
             <div className="loading-wave loading-wave-back" />
             <div className="loading-wave loading-wave-mid" />
             <div className="loading-wave loading-wave-front" />
