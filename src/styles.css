@@ -146,13 +146,13 @@ input:focus-visible {
 .loading-bubbles i {
   position: absolute;
   bottom: -30px;
-  left: calc(var(--bubble) * 19% + 3%);
-  width: calc(5px + var(--bubble) * 2px);
-  height: calc(5px + var(--bubble) * 2px);
+  left: var(--bubble-left);
+  width: var(--bubble-size);
+  height: var(--bubble-size);
   border: 1px solid rgba(145, 228, 214, 0.65);
   border-radius: 50%;
   animation: loading-bubble 5.5s linear infinite;
-  animation-delay: calc(var(--bubble) * -0.9s);
+  animation-delay: var(--bubble-delay);
 }
 .loading-bubbles i:nth-child(1) {
   --bubble: 0;
@@ -178,10 +178,10 @@ input:focus-visible {
 }
 .loading-submarine {
   position: absolute;
-  top: 63%;
-  left: -130px;
-  width: 112px;
-  height: 42px;
+  top: 60%;
+  left: -190px;
+  width: 168px;
+  height: 62px;
   border-radius: 55% 48% 48% 55%;
   background: #ff806d;
   box-shadow:
@@ -192,57 +192,57 @@ input:focus-visible {
 .loading-submarine::before {
   content: "";
   position: absolute;
-  right: -18px;
-  top: 12px;
-  border-left: 22px solid #ff806d;
-  border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent;
+  right: -27px;
+  top: 18px;
+  border-left: 32px solid #ff806d;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
 }
 .submarine-window {
   position: relative;
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 14px 0 0 15px;
+  width: 18px;
+  height: 18px;
+  margin: 21px 0 0 23px;
   border: 2px solid #063750;
   border-radius: 50%;
   background: #91e4d6;
 }
 .submarine-window + .submarine-window {
-  margin-left: 7px;
+  margin-left: 10px;
 }
 .submarine-periscope {
   position: absolute;
-  left: 55px;
-  top: -17px;
-  width: 4px;
-  height: 19px;
+  left: 82px;
+  top: -25px;
+  width: 5px;
+  height: 28px;
   background: #91e4d6;
 }
 .submarine-periscope::after {
   content: "";
   position: absolute;
   left: 0;
-  top: -3px;
-  width: 12px;
-  height: 4px;
+  top: -4px;
+  width: 17px;
+  height: 5px;
   border-radius: 4px 4px 0 0;
   background: #91e4d6;
 }
 .submarine-fin {
   position: absolute;
-  right: 24px;
-  bottom: -8px;
-  border-top: 10px solid #91e4d6;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
+  right: 35px;
+  bottom: -12px;
+  border-top: 15px solid #91e4d6;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
 }
 @keyframes submarine-sail {
   0% {
     transform: translateX(0) translateY(9px);
   }
   45% {
-    transform: translateX(58vw) translateY(-9px);
+    transform: translateX(58vw) translateY(-14px);
   }
   100% {
     transform: translateX(calc(100vw + 180px)) translateY(7px);
@@ -250,14 +250,14 @@ input:focus-visible {
 }
 .loading-school {
   position: absolute;
-  top: 55%;
-  left: 55%;
+  top: 52%;
+  left: 47%;
   color: rgba(145, 228, 214, 0.78);
   transform: scale(0.75) rotate(-7deg);
 }
 .loading-school span {
   display: inline-block;
-  margin: 0 7px;
+  margin: 0 5px;
   font-size: calc(15px + var(--fish) * 5px);
   animation: loading-fish 3.5s ease-in-out infinite alternate;
 }
@@ -338,6 +338,80 @@ input:focus-visible {
   right: 9%;
   color: #91e4d6;
   transform: scale(0.75);
+}
+.loading-depth {
+  position: absolute;
+  inset: 0;
+}
+.loading-depth-far {
+  z-index: 0;
+  opacity: 0.38;
+  filter: blur(1.5px);
+  transform: scale(0.9);
+}
+.loading-depth-near {
+  z-index: 3;
+  transform: scale(1.12);
+  transform-origin: bottom center;
+}
+.loading-depth-near .loading-coral-right {
+  right: 3%;
+  bottom: 12px;
+}
+.loading-depth-near .loading-kelp {
+  right: 34%;
+  bottom: -8px;
+}
+.loading-kelp-far {
+  left: 27%;
+  right: auto;
+  bottom: 42px;
+  transform: scale(0.68);
+}
+.loading-seahorse {
+  position: absolute;
+  right: 34%;
+  top: 45%;
+  width: 24px;
+  height: 58px;
+  color: rgba(145, 228, 214, 0.7);
+  animation: seahorse-float 5s ease-in-out infinite;
+}
+.loading-seahorse b {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  width: 17px;
+  height: 27px;
+  border-radius: 60% 55% 45% 55%;
+  background: currentColor;
+}
+.loading-seahorse b::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 8px;
+  width: 13px;
+  height: 15px;
+  border-radius: 60% 60% 45% 45%;
+  background: currentColor;
+}
+.loading-seahorse i {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  width: 17px;
+  height: 25px;
+  border: 4px solid currentColor;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  transform: rotate(24deg);
+}
+@keyframes seahorse-float {
+  50% {
+    transform: translate3d(-10px, -15px, 0) rotate(-5deg);
+  }
 }
 .loading-coral i {
   width: 6px;

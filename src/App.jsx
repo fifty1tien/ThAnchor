@@ -67,13 +67,35 @@ export default function App() {
               </span>
             </div>
             <div className="loading-bubbles" aria-hidden="true">
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
+              {Array.from({ length: 14 }, (_, index) => (
+                <i
+                  key={index}
+                  style={{
+                    "--bubble": index,
+                    "--bubble-left": `${(index * 37) % 98}%`,
+                    "--bubble-size": `${5 + (index % 4) * 2}px`,
+                    "--bubble-delay": `${-(index * 0.45)}s`,
+                  }}
+                />
+              ))}
             </div>
             <div className="loading-life" aria-hidden="true">
+              <div className="loading-depth loading-depth-far">
+                <div className="loading-coral loading-coral-left">
+                  <i />
+                  <i />
+                  <i />
+                </div>
+                <div className="loading-kelp loading-kelp-far">
+                  <i />
+                  <i />
+                  <i />
+                </div>
+                <div className="loading-seahorse">
+                  <b />
+                  <i />
+                </div>
+              </div>
               <div className="loading-submarine">
                 <span className="submarine-window" />
                 <span className="submarine-window" />
@@ -85,6 +107,10 @@ export default function App() {
                 <span>𓆟</span>
                 <span>𓆞</span>
                 <span>𓆝</span>
+                <span>𓆟</span>
+                <span>𓆞</span>
+                <span>𓆝</span>
+                <span>𓆟</span>
               </div>
               <div className="loading-jellyfish">
                 <b />
@@ -92,21 +118,20 @@ export default function App() {
                 <i />
                 <i />
               </div>
-              <div className="loading-coral loading-coral-left">
-                <i />
-                <i />
-                <i />
-              </div>
-              <div className="loading-coral loading-coral-right">
-                <i />
-                <i />
-                <i />
-              </div>
-              <div className="loading-kelp">
-                <i />
-                <i />
-                <i />
-                <i />
+              <div className="loading-depth loading-depth-near">
+                <div className="loading-coral loading-coral-right">
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                </div>
+                <div className="loading-kelp">
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                </div>
               </div>
             </div>
             <div className="loading-wave loading-wave-back" />
