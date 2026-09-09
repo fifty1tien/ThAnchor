@@ -171,11 +171,39 @@ export default function App() {
                   </span>
                 ))}
               </div>
-              <div className="loading-turtle-pod">
-                <span>🐢</span>
-                <span>🐢</span>
-                <span>🐢</span>
-                <span>🐢</span>
+              <div className="loading-school loading-school-left">
+                {Array.from({ length: 7 }, (_, index) => (
+                  <span
+                    key={index}
+                    style={{
+                      "--fish": index % 3,
+                      "--fish-x": `${(index * 39) % 220}px`,
+                      "--fish-y": `${(index * 31) % 100}px`,
+                      "--fish-size": `${12 + (index % 3) * 4}px`,
+                      "--fish-rotate": `${index % 2 ? 8 : -5}deg`,
+                      "--fish-delay": `${-(index * 0.34)}s`,
+                    }}
+                  >
+                    {index % 3 === 0 ? "𓆝" : index % 3 === 1 ? "𓆟" : "𓆞"}
+                  </span>
+                ))}
+              </div>
+              <div className="loading-school loading-school-right">
+                {Array.from({ length: 8 }, (_, index) => (
+                  <span
+                    key={index}
+                    style={{
+                      "--fish": index % 4,
+                      "--fish-x": `${(index * 43) % 240}px`,
+                      "--fish-y": `${(index * 37) % 112}px`,
+                      "--fish-size": `${11 + (index % 4) * 4}px`,
+                      "--fish-rotate": `${index % 2 ? -6 : 7}deg`,
+                      "--fish-delay": `${-(index * 0.27)}s`,
+                    }}
+                  >
+                    {index % 3 === 0 ? "𓆝" : index % 3 === 1 ? "𓆟" : "𓆞"}
+                  </span>
+                ))}
               </div>
               <div className="loading-jellyfish">
                 <b />
