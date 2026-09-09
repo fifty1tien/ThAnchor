@@ -1365,7 +1365,7 @@ h2 em {
   position: relative;
   height: 190px;
   overflow: hidden;
-  background: linear-gradient(180deg, #e2f7f1 0%, #a8dcd8 55%, #70b6bd 100%);
+  background: #a8dcd8;
   color: #063750;
 }
 .wave-divider {
@@ -1436,10 +1436,10 @@ h2 em {
   text-transform: uppercase;
   color: #063750;
   padding: 8px 10px;
-  background: rgba(226, 247, 241, 0.58);
+  background: transparent;
 }
 body.night-mode .ocean-transition {
-  background: linear-gradient(180deg, #073e54 0%, #021b2a 100%);
+  background: #073e54;
   color: #c3dfda;
 }
 body.night-mode .ocean-decor-floor .fish-school {
@@ -1456,7 +1456,7 @@ body.night-mode .ocean-decor-floor .wave-line {
 }
 body.night-mode .transition-caption {
   color: var(--cyan);
-  background: rgba(3, 28, 45, 0.62);
+  background: transparent;
 }
 .projects-section,
 .notes-section {
@@ -1464,7 +1464,10 @@ body.night-mode .transition-caption {
   overflow: hidden;
   padding-top: 140px;
   padding-bottom: 120px;
-  background: rgba(244, 247, 242, 0.7);
+  background: rgba(168, 220, 216, 0.96);
+}
+.projects-section {
+  background: #a8dcd8;
 }
 .projects-section > :not(.ocean-decor),
 .notes-section > :not(.ocean-decor),
@@ -2445,6 +2448,9 @@ body.night-mode .projects-section,
 body.night-mode .notes-section {
   color: var(--ink);
   background: transparent;
+}
+body.night-mode .projects-section {
+  background: #073e54;
 }
 body.night-mode .brand-mark {
   color: var(--cyan);
