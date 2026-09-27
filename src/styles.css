@@ -2432,10 +2432,13 @@ body.night-mode .reading-wave path {
   stroke: var(--cyan);
 }
 body.night-mode .wave-divider-back {
-  fill: rgba(7, 62, 84, 0.72);
+  fill: rgba(10, 79, 99, 0.94);
 }
 body.night-mode .wave-divider-front {
-  fill: rgba(2, 27, 42, 0.9);
+  fill: rgba(3, 42, 59, 0.96);
+}
+body.night-mode .wave-divider {
+  filter: drop-shadow(0 4px 10px rgba(145, 228, 214, 0.16));
 }
 body.night-mode .fishing-trigger {
   color: var(--cyan);

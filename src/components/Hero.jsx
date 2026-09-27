@@ -64,7 +64,7 @@ export default function Hero({ onExplore }) {
         <div className="orbit-ring ring-two" />
         <div className="orbit-core">
           <img
-            src="https://media.licdn.com/dms/image/v2/D4E03AQHqiRyXBgZ_2A/profile-displayphoto-crop_800_800/B4EaBqnVPXIIAI-/0/1788495093804?e=1790208000&v=beta&t=0t-6L2k7i434_M-I6jsVIUydKnpGPbTytTJfY60GZlA"
+            src="https://media.licdn.com/dms/image/v2/D5603AQEWl3hhsFBfJg/profile-displayphoto-shrink_400_400/B56aCJ41NhGUAc-/0/1789019771960?e=1792022400&v=beta&t=rVR_cxKSfaxqizoekHShbR2ZHlIDHCUkAvlspXXYZ6Y"
             alt="Profil M. Sulthan Muzaki"
           />
         </div>
