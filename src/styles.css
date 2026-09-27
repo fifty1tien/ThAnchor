@@ -2498,6 +2498,17 @@ body.night-mode .brand-mark {
 .night-mode .round-link {
   color: var(--cyan);
 }
+.night-mode .project-list {
+  background: rgba(3, 28, 45, 0.28);
+  border-color: rgba(145, 228, 214, 0.16);
+}
+.night-mode .project-row {
+  background: rgba(7, 62, 84, 0.34);
+  border-color: rgba(145, 228, 214, 0.14);
+}
+.night-mode .project-row:hover {
+  background: rgba(66, 174, 180, 0.18);
+}
 .night-mode .nav-link,
 .night-mode .hero-intro,
 .night-mode .section-heading > p,
