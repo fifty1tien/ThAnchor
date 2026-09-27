@@ -49,7 +49,19 @@ export default function Article({ post, onBack }) {
             Published {post.date} <span /> <Clock3 size={15} /> {post.readTime}
           </div>
         </div>
-        <div className="article-visual">
+        <div
+          className={
+            post.id === 1
+              ? "article-visual has-article-image"
+              : "article-visual"
+          }
+        >
+          {post.id === 1 && (
+            <img
+              src="https://media.licdn.com/dms/image/v2/D5616AQF2vy3jPpkNUA/profile-displaybackgroundimage-shrink_350_1400/B56aCJ49SmHEAY-/0/1789019805120?e=1792022400&v=beta&t=zxZyUxUNNETtLaOPdnxFmQLGkIBFnFL0uhBqGPCWbPc"
+              alt="Visual Set Sail Into the Ocean"
+            />
+          )}
           <span>𓆝</span>
           <p>
             the ocean keeps
