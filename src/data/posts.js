@@ -80,8 +80,7 @@ Terima kasih telah bersedia singgah di dermaga digitalku. Mari bersiap, angkat s
   {
     id: 5,
     slug: "tiga-gelombang-di-dunia-it-rpl-tkj-acp",
-    title:
-      "Tiga Gelombang di Dunia IT: Membedakan Arus RPL, TKJ, dan ACP (Axioo)",
+    title: "Arus di Samudera IT: Membedakan Arus RPL, TKJ, dan ACP",
     category: "Tech",
     date: "27 September 2026",
     readTime: "7 min read",
