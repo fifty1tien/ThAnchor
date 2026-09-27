@@ -77,4 +77,66 @@ Terima kasih telah bersedia singgah di dermaga digitalku. Mari bersiap, angkat s
 
   Yosudahlah, intinyo tetep jago kesehatan, kurangin aktivitas diluar, kalo pun nak keluar jangan lupo pake masker, guiss! Paru-paru kito ni dak katek fitur backup, apolagi restore kalo lah ancorr.`,
   },
+  {
+    id: 5,
+    slug: "tiga-gelombang-di-dunia-it-rpl-tkj-acp",
+    title:
+      "Tiga Gelombang di Dunia IT: Membedakan Arus RPL, TKJ, dan ACP (Axioo)",
+    category: "Tech",
+    date: "27 September 2026",
+    readTime: "7 min read",
+    excerpt:
+      "Memetakan perbedaan RPL, TKJ, dan ACP di SMKN 4 Palembang: dari objek kerja sampai kompetensi industri.",
+    tag: "05 / IT currents",
+    imageUrl:
+      "https://smkn4plg.id/uploads/konsentrasi/optimized/file_697eef3b49363_1769926459-960.webp",
+    imageAlt: "Konsentrasi keahlian IT SMKN 4 Palembang",
+    body: `Mengarungi Samudra IT SMKN 4 Palembang: Mengapa RPL, TKJ, dan ACP Itu Tidak Sama?
+
+Hai Ocean Explorer!
+
+Jumpa lagi sama aku Sulthan disini~ So, kita tudep aja. Hari ini aku mau bahas perbedaan jurusan kiteee cuyy
+
+Banyak orang di luar (bahkan sesama siswa atau malah guru) yang masih sering nganggep semua jurusan komputer itu sama aja: "Ah, sama-sama belajar komputer ini." Padahal di SMKN 4 Palembang, perbedaannya beneran jelas dan mencolok.
+
+Biar ngga ada lagi salah kaprah yang nyamain jurusan kita, aku kasih pemetaan perbedaan mendasar antara RPL, TKJ, dan ACP (Axioo Class Program).
+
+1. Pokok Objek Yang Dikerjakan
+
+Perbedaan paling mendasar terletak pada objek utama yang disentuh oleh masing-masing jurusan.
+
+RPL (Rekayasa Perangkat Lunak): Objek utamanya adalah software dan kode (logic). Anak RPL bekerja membuat program dari yang tidak ada menjadi ada menggunakan bahasa pemrograman seperti PHP, JavaScript, Python, dan Java. Kita fokus pada bagaimana sebuah sistem web, basis data, atau aplikasi mobile berjalan secara logika.
+
+TKJ (Teknik Komputer dan Jaringan): Objek utamanya adalah hardware dan infrastruktur jaringan. Anak TKJ bekerja menghubungkan antarperangkat komputer agar bisa saling berkomunikasi. Fokusnya ada pada kabel LAN, router, switch, IP Address, dan konfigurasi server.
+
+ACP (Axioo Class Program): Objek utamanya adalah perangkat dan standar industri pabrikan Axioo. ACP bukan sekadar jurusan terpisah, melainkan program kelas industri yang menekankan arsitektur perangkat keras dan lunak sesuai standar manufaktur Axioo, termasuk troubleshooting tingkat lanjut dan perakitan standar industri.
+
+2. Pola Pikir dan Daily Routine (Aktivitas Harian)
+
+Cara kerja harian di lab komputer dari ketiga jurusan ini sangat kontras.
+
+RPL: Menulis source code, debugging, mendesain database, dan menyusun logika algoritma. Peralatan utamanya adalah text editor seperti VS Code, browser, database manager, dan Git. Masalah utamanya berupa syntax error, bug pada program, dan logika fungsi yang salah.
+
+TKJ: Crimping kabel, memasang perangkat jaringan, dan konfigurasi MikroTik/Linux. Peralatan utamanya adalah tang crimping, LAN tester, router board, dan cable stripper. Masalah utamanya berupa jaringan RTO (Request Timed Out), kabel putus, dan koneksi bentrok.
+
+ACP (Axioo): Membongkar dan merakit unit perangkat, menguji kelayakan teknis, serta melakukan simulasi SOP kerja industri. Peralatan utamanya adalah obeng set presisi, ESD Wrist Strap, perangkat uji Axioo, dan Standard Operating Procedure. Masalah utamanya berupa kerusakan komponen keras dan ketidaksesuaian SOP pabrikan.
+
+3. Titik Tekan (Fokus Hasil Akhir)
+
+Anak RPL menghasilkan aplikasi web, aplikasi Android/iOS, sistem informasi, dan struktur data yang siap dipakai pengguna.
+
+Anak TKJ menghasilkan jaringan internet yang stabil, sistem keamanan jaringan, dan infrastruktur server yang siap menampung data.
+
+Anak ACP menghasilkan keterampilan teknis terstandarisasi industri, kemampuan perbaikan perangkat sesuai standar pabrikan, serta kedisiplinan kerja kelas industri.
+
+Ringkasan Singkat
+
+RPL = Murni membangun perangkat lunak (software) dan sistem logika.
+
+TKJ = Murni membangun infrastruktur jaringan dan konektivitas data.
+
+ACP = Penguasaan teknologi dan kedisiplinan industri sesuai standar vendor Axioo.
+
+Jadi, walaupun kami sama-sama ngegunain komputer di sekolah, tiga-tiganya ngarungin wilayah yang bener-bener berbeda di samudra dunia IT! SO, JANGAN ADA YANG NYAMAIN JURUSAN KITA LAGI PLSSS HUHUUHHHUHUHUHUHUUUUUUUUUUU`,
+  },
 ];
