@@ -2376,6 +2376,10 @@ body.night-mode .transition-caption {
 .article-body p:last-child {
   margin-bottom: 0;
 }
+.article-body .article-opening {
+  color: var(--ink);
+  font: 400 25px/1.45 var(--serif);
+}
 .article-opening strong {
   color: var(--ink);
   font-weight: 800;
