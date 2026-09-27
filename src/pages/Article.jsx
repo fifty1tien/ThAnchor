@@ -59,7 +59,7 @@ export default function Article({ post, onBack }) {
           {post.imageUrl && (
             <img src={post.imageUrl} alt={post.imageAlt || post.title} />
           )}
-          <span>𓆝</span>
+          {!post.imageUrl && <span>𓆝</span>}
           <p>
             the ocean keeps
             <br />
