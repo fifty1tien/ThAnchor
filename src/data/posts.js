@@ -69,8 +69,12 @@ Terima kasih telah bersedia singgah di dermaga digitalku. Mari bersiap, angkat s
     imageUrl:
       "https://lh3.googleusercontent.com/d/1VztdBiQeiZxd-XdcT7T5do-LYjewujpg",
     imageAlt: "Foto kabut asap Palembang",
-    body: `Halo Ocean Explorer! Selamat datang kembali di blog aku gwejh me yang kalian sayang. Balik lagi sama aku, anak X RPL 2 SMKN 4 Palembang yang hari ini nulis artikel bukan sambil dengerin lagu pop, tapi dengerin orang batuk berjamaah dari rumah sebelah. Jujur, hari ini Palembang lagi ngebug parah, gess. Kalau di dunia coding, kondisi kota kita sekarang udah bukan warning lagi, tapi Critical Crash runtime error. Gimana engga? Kabut asap yang udah berminggu-minggu akibat kebakaran hutan dan lahan (karhutla) ngga reda-reda. Udah gitu, puncaknya hari ini Indeks Kualitas Udara di Palembang pecah rekor sampai tembus angka 1.212! Coba mikir deh, nyari error di ribuan baris code aja bikin pusing, apalagi nyari oksigen segar di Palembang 🙂.
+    body: `Halo Ocean Explorer!
 
-Yosudahlah, intinyo tetep jago kesehatan, kurangin aktivitas diluar, kalo pun nak keluar jangan lupo pake masker, guiss! Paru-paru kito ni dak katek fitur backup, apolagi restore kalo lah ancorr.`,
+  Selamat datang kembali di blog aku gwejh me yang kalian sayang. Balik lagi sama aku, anak X RPL 2 SMKN 4 Palembang yang hari ini nulis artikel bukan sambil dengerin lagu pop, tapi dengerin orang batuk berjamaah dari rumah sebelah.
+
+  Jujur, hari ini Palembang lagi ngebul parah gess. Kalau di dunia coding, kondisi kota kita sekarang udah bukan warning lagi, tapi Critical Crash runtime error. Gimana engga? Kabut asap yang udah berminggu-minggu akibat kebakaran hutan dan lahan (karhutla) ngga reda-reda. Udah gitu, puncaknya hari ini Indeks Kualitas Udara di Palembang pecah rekor sampai tembus angka 1.212! Coba mikir deh, nyari error di ribuan baris code aja bikin pusing, apalagi nyari oksigen segar di Palembang🙂.
+
+  Yosudahlah, intinyo tetep jago kesehatan, kurangin aktivitas diluar, kalo pun nak keluar jangan lupo pake masker, guiss! Paru-paru kito ni dak katek fitur backup, apolagi restore kalo lah ancorr.`,
   },
 ];
