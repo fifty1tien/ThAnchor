@@ -51,16 +51,13 @@ export default function Article({ post, onBack }) {
         </div>
         <div
           className={
-            post.id === 1
+            post.imageUrl
               ? "article-visual has-article-image"
               : "article-visual"
           }
         >
-          {post.id === 1 && (
-            <img
-              src="https://media.licdn.com/dms/image/v2/D5616AQF2vy3jPpkNUA/profile-displaybackgroundimage-shrink_350_1400/B56aCJ49SmHEAY-/0/1789019805120?e=1792022400&v=beta&t=zxZyUxUNNETtLaOPdnxFmQLGkIBFnFL0uhBqGPCWbPc"
-              alt="Visual Set Sail Into the Ocean"
-            />
+          {post.imageUrl && (
+            <img src={post.imageUrl} alt={post.imageAlt || post.title} />
           )}
           <span>𓆝</span>
           <p>
