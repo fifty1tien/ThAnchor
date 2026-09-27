@@ -67,15 +67,25 @@ export default function Article({ post, onBack }) {
           </p>
         </div>
         <div className="article-body">
-          {post.body.split("\n\n").map((paragraph, index) =>
-            index === 0 ? (
+          {post.body.split("\n\n").map((paragraph, index) => {
+            const isSmokeOpening = post.id === 4 && index === 0;
+            if (isSmokeOpening) {
+              const greeting = "Halo Ocean Explorer!";
+              return (
+                <p className="article-opening" key={paragraph}>
+                  <strong>{greeting}</strong>
+                  {paragraph.slice(greeting.length)}
+                </p>
+              );
+            }
+            return index === 0 ? (
               <p className="article-lead" key={paragraph}>
                 {paragraph}
               </p>
             ) : (
               <p key={paragraph}>{paragraph}</p>
-            ),
-          )}
+            );
+          })}
         </div>
         <div className="article-end">— end of current —</div>
       </div>

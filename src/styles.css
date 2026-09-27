@@ -2366,11 +2366,19 @@ body.night-mode .transition-caption {
   margin: 70px auto 0;
   color: #4f747e;
   font-size: 15px;
-  line-height: 2;
+  line-height: 1.95;
+  text-wrap: pretty;
 }
 .article-body p {
   white-space: pre-line;
-  margin: 0 0 24px;
+  margin: 0 0 32px;
+}
+.article-body p:last-child {
+  margin-bottom: 0;
+}
+.article-opening strong {
+  color: var(--ink);
+  font-weight: 800;
 }
 .article-body .article-lead {
   color: var(--ink);
